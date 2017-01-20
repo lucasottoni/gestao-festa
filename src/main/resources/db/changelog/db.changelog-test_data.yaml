@@ -103,4 +103,29 @@ databaseChangeLog:
               - column:
                   name: defined_entity_id
                   value: 1
-
+        - createTable:
+            comment: Dados de exemplo para a estrutura criada
+            tableName: sky_product
+            columns:
+              - column:
+                  name: fld_id
+                  type: numeric
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: fld_name
+                  type: varchar(100)
+              - column:
+                  name: fld_description
+                  type: varchar(100)
+              - column:
+                  name: fld_value
+                  type: numeric
+              - column:
+                  name: sky_active_
+                  type: char(1)
+                  defaultValue: S
+                  constraints:
+                    nullable: false
