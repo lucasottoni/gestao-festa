@@ -23,7 +23,8 @@ public class DDLDataServiceImpl implements DDLDataService {
 		sb.append(definedEntityField.getPhysicalName());
 		switch (definedEntityField.getType()) {
 		case NUMBER:
-			sb.append(" Numeric");
+			if (definedEntityField.isFieldIdentity()) sb.append(" SERIAL");
+			else sb.append(" Numeric");
 			break;
 		case STRING:
 			sb.append(" VARCHAR(100)");
