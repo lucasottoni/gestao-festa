@@ -129,3 +129,15 @@ databaseChangeLog:
                   defaultValue: S
                   constraints:
                     nullable: false
+        - insert:
+            tableName: sky_product
+            columns:
+              - column:
+                  name: fld_name
+                  value: Mouse
+              - column:
+                  name: fld_description
+                  value: Mouse Logitech USB com fio
+              - column:
+                  name: fld_value
+                  value: 30.90   
