@@ -109,7 +109,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: fld_id
-                  type: numeric
+                  type: SERIAL
                   autoIncrement: true
                   constraints:
                     primaryKey: true
