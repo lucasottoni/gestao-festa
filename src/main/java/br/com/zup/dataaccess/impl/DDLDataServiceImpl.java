@@ -56,7 +56,7 @@ public class DDLDataServiceImpl implements DDLDataService {
 				if (definedEntityField.isFieldIdentity()
 						&& definedEntityField.getType().equals(DefinedEntityFieldType.NUMBER)) {
 					fieldIdIdentity = true;
-					sb.append(" IDENTITY ");
+					//sb.append(" IDENTITY ");
 				}
 			}
 			sb.append(",");
