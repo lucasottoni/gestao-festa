@@ -1,0 +1,252 @@
+databaseChangeLog:
+  - changeSet:
+      comment: Cria uma estrutura modelo inicial (Produto) com alguns dados
+      id: 2
+      author: Lucas Ottoni
+      changes:
+        - insert:
+            tableName: defined_entity
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: friendly_name
+                  value: produto
+              - column:
+                  name: physical_name
+                  value: sky_product
+              - column:
+                  name: deleted
+                  value: false
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: id
+              - column:
+                  name: physical_name
+                  value: fld_id
+              - column:
+                  name: type
+                  value: 1
+              - column:
+                  name: field_id
+                  value: true
+              - column:
+                  name: field_identity
+                  value: true
+              - column:
+                  name: defined_entity_id
+                  value: 1
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: nome
+              - column:
+                  name: physical_name
+                  value: fld_name
+              - column:
+                  name: type
+                  value: 0
+              - column:
+                  name: field_id
+                  value: false
+              - column:
+                  name: field_identity
+                  value: false
+              - column:
+                  name: defined_entity_id
+                  value: 1
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: descricao
+              - column:
+                  name: physical_name
+                  value: fld_description
+              - column:
+                  name: type
+                  value: 0
+              - column:
+                  name: field_id
+                  value: false
+              - column:
+                  name: field_identity
+                  value: false
+              - column:
+                  name: defined_entity_id
+                  value: 1
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: valor
+              - column:
+                  name: physical_name
+                  value: fld_value
+              - column:
+                  name: type
+                  value: 1
+              - column:
+                  name: field_id
+                  value: false
+              - column:
+                  name: field_identity
+                  value: false
+              - column:
+                  name: defined_entity_id
+                  value: 1
+        - createTable:
+            comment: Dados de exemplo para a estrutura criada
+            tableName: sky_product
+            columns:
+              - column:
+                  name: fld_id
+                  type: numeric
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: fld_name
+                  type: varchar(100)
+              - column:
+                  name: fld_description
+                  type: varchar(100)
+              - column:
+                  name: fld_value
+                  type: numeric
+              - column:
+                  name: sky_active_
+                  type: char(1)
+                  defaultValue: S
+                  constraints:
+                    nullable: false
+        - insert:
+            tableName: sky_product
+            columns:
+              - column:
+                  name: fld_name
+                  value: Mouse
+              - column:
+                  name: fld_description
+                  value: Mouse Logitech USB com fio
+              - column:
+                  name: fld_value
+                  value: 30.90              
+        - insert:
+            tableName: sky_product
+            columns:
+              - column:
+                  name: fld_name
+                  value: Teclado
+              - column:
+                  name: fld_description
+                  value: Teclado Logitech USB com fio
+              - column:
+                  name: fld_value
+                  value: 44.90              
+        - insert:
+            tableName: sky_product
+            columns:
+              - column:
+                  name: fld_name
+                  value: HD WD
+              - column:
+                  name: fld_description
+                  value: HD Externo Western Digital 1TB
+              - column:
+                  name: fld_value
+                  value: 230.90         
+        - insert:
+            tableName: defined_entity
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: friendly_name
+                  value: convidados
+              - column:
+                  name: physical_name
+                  value: sky_convidado
+              - column:
+                  name: deleted
+                  value: false
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: nome
+              - column:
+                  name: physical_name
+                  value: fld_nome
+              - column:
+                  name: type
+                  value: 2
+              - column:
+                  name: field_id
+                  value: false
+              - column:
+                  name: field_identity
+                  value: false
+              - column:
+                  name: defined_entity_id
+                  value: 2
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: quantidade_acompanhantes
+              - column:
+                  name: physical_name
+                  value: fld_qtd_acomp
+              - column:
+                  name: type
+                  value: 1
+              - column:
+                  name: field_id
+                  value: false
+              - column:
+                  name: field_identity
+                  value: false
+              - column:
+                  name: defined_entity_id
+                  value: 2
+        - createTable:
+            comment: Dados de convidado
+            tableName: sky_convidado
+            columns:
+              - column:
+                  name: fld_nome
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fld_qtd_acomp
+                  type: numeric
+              - column:
+                  name: sky_active_
+                  type: char(1)
+                  defaultValue: S
+                  constraints:
+                    nullable: false
+        - insert:
+            tableName: sky_convidado
+            columns:
+              - column:
+                  name: fld_nome
+                  value: Pedro
+              - column:
+                  name: fld_qtd_acomp
+                  value: 7
+

@@ -1,8 +1,11 @@
-package com.algaworks.festa.model;
+package br.com.zup.festa.model;
+
+import com.google.gson.annotations.SerializedName;
 
 public class Convidado {
 
 	private String nome;
+	@SerializedName("quantidade_acompanhantes")
 	private Integer quantidadeAcompanhantes;
 
 	public Convidado() {
