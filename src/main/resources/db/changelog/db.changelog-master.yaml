@@ -3,3 +3,5 @@ databaseChangeLog:
       file: db/changelog/db.changelog-1.0.yaml
   - include:
       file: db/changelog/db.changelog-test_data.yaml
+  - include:
+      file: db/changelog/db.changelog-postgres.yaml
