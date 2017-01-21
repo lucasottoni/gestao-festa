@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      comment: Alteracao do tipo de dado defined_entity.id para serial
+      id: 3
+      author: Lucas Ottoni
+      changes:
+        - modifyDataType:
+          columnName: id
+          newDataType: SERIAL
+          tableName: defined_entity
