@@ -10,7 +10,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: SERIAL
                   autoIncrement: true
                   constraints:
                     primaryKey: true
@@ -36,7 +36,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: SERIAL
                   autoIncrement: true
                   constraints:
                     primaryKey: true

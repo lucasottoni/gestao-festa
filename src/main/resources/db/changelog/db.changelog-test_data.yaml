@@ -8,9 +8,6 @@ databaseChangeLog:
             tableName: defined_entity
             columns:
               - column:
-                  name: id
-                  value: 1
-              - column:
                   name: friendly_name
                   value: produto
               - column:
@@ -168,9 +165,6 @@ databaseChangeLog:
         - insert:
             tableName: defined_entity
             columns:
-              - column:
-                  name: id
-                  value: 2
               - column:
                   name: friendly_name
                   value: convidados
