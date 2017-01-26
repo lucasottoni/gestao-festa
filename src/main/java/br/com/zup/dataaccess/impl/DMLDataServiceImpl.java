@@ -188,7 +188,7 @@ public class DMLDataServiceImpl implements DMLDataService {
 		StringBuilder sb = new StringBuilder("SELECT count(*) FROM ");
 		sb.append(definedEntity.getPhysicalName()).append(WHERE).append(fieldId).append("=?");
 
-		int count = jdbcTemplate.queryForObject(sb.toString(), new Object[] { id }, Integer.class);
+		int count = jdbcTemplate.queryForObject(sb.toString(), new Object[] { new Integer(id) }, Integer.class);
 
 		if (count > 0) {
 			return true;
