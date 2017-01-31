@@ -12,7 +12,7 @@ import br.com.zup.request.AuthRequest;
 import br.com.zup.response.AuthResponse;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 public class AuthController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
